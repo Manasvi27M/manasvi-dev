@@ -103,7 +103,7 @@ export default function Projects() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white"
+          className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900 dark:gradient-text"
         >
           My <span className="text-purple-600 dark:text-purple-400">Projects</span>
         </motion.h2>
@@ -116,8 +116,8 @@ export default function Projects() {
                 variant={activeTab === tab ? "default" : "outline"}
                 className={
                   activeTab === tab
-                    ? "bg-purple-600 hover:bg-purple-700"
-                    : "border-purple-200 text-gray-700 hover:border-purple-600 hover:text-purple-600 dark:border-gray-700 dark:text-gray-300 dark:hover:border-purple-500 dark:hover:text-purple-400"
+                    ? "bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-600 dark:glow-effect"
+                    : "border-purple-200 text-gray-700 hover:border-purple-600 hover:text-purple-600 dark:border-purple-700 dark:text-purple-300 dark:hover:border-purple-500 dark:hover:text-purple-400"
                 }
                 onClick={() => setActiveTab(tab)}
               >
@@ -130,7 +130,7 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div key={index} variants={itemVariants} className="h-full">
-              <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
+              <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow dark:border-purple-900/50 dark:bg-gray-900/80 dark:card-hover">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={project.image || "/placeholder.svg"}
@@ -138,14 +138,14 @@ export default function Projects() {
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-purple-600 hover:bg-purple-700">
+                    <Badge className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:text-white">
                       {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                     </Badge>
                   </div>
                 </div>
                 <CardHeader>
                   <div className="flex items-center justify-between">
-                    <div className="bg-purple-100 dark:bg-purple-900/50 p-2 rounded-lg text-purple-600 dark:text-purple-400">
+                    <div className="bg-purple-100 dark:bg-purple-900/70 p-2 rounded-lg text-purple-600 dark:text-purple-400">
                       {project.icon}
                     </div>
                     <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
@@ -153,8 +153,8 @@ export default function Projects() {
                       {project.date}
                     </div>
                   </div>
-                  <CardTitle className="text-xl mt-2">{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
+                  <CardTitle className="text-xl mt-2 dark:text-white">{project.title}</CardTitle>
+                  <CardDescription className="dark:text-gray-300">{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
@@ -177,10 +177,10 @@ export default function Projects() {
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
-                  <Button variant="outline" size="sm" className="text-gray-700 dark:text-gray-300">
+                  <Button variant="outline" size="sm" className="text-gray-700 dark:text-gray-300 dark:border-gray-700">
                     <Github className="h-4 w-4 mr-2" /> Code
                   </Button>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-700">
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-700 dark:glow-effect">
                     <ExternalLink className="h-4 w-4 mr-2" /> Live Demo
                   </Button>
                 </CardFooter>

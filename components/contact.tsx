@@ -114,7 +114,7 @@ export default function Contact() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white"
+          className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:gradient-text"
         >
           Get In <span className="text-purple-600 dark:text-purple-400">Touch</span>
         </motion.h2>
@@ -122,8 +122,10 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div variants={itemVariants}>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Send Me a Message</h3>
+            <div className="bg-white dark:bg-gray-900/80 dark:border dark:border-purple-900/30 rounded-xl shadow-lg p-8 dark:card-hover">
+              <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white dark:purple-glow">
+                Send Me a Message
+              </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -137,7 +139,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="John Doe"
                       required
-                      className="border-gray-300 dark:border-gray-700 focus:border-purple-500 dark:focus:border-purple-500"
+                      className="border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:border-purple-500 dark:focus:border-purple-500"
                     />
                   </div>
                   <div className="space-y-2">
@@ -152,7 +154,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="john@example.com"
                       required
-                      className="border-gray-300 dark:border-gray-700 focus:border-purple-500 dark:focus:border-purple-500"
+                      className="border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:border-purple-500 dark:focus:border-purple-500"
                     />
                   </div>
                 </div>
@@ -167,7 +169,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="How can I help you?"
                     required
-                    className="border-gray-300 dark:border-gray-700 focus:border-purple-500 dark:focus:border-purple-500"
+                    className="border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:border-purple-500 dark:focus:border-purple-500"
                   />
                 </div>
                 <div className="space-y-2">
@@ -182,12 +184,12 @@ export default function Contact() {
                     placeholder="Your message here..."
                     rows={5}
                     required
-                    className="border-gray-300 dark:border-gray-700 focus:border-purple-500 dark:focus:border-purple-500"
+                    className="border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:border-purple-500 dark:focus:border-purple-500"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white dark:glow-effect"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -226,8 +228,10 @@ export default function Contact() {
 
           {/* Contact Information */}
           <motion.div variants={itemVariants}>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 h-full">
-              <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Contact Information</h3>
+            <div className="bg-white dark:bg-gray-900/80 dark:border dark:border-purple-900/30 rounded-xl shadow-lg p-8 h-full dark:card-hover">
+              <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white dark:purple-glow">
+                Contact Information
+              </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-8">
                 Feel free to reach out to me through any of these channels. I'm always open to discussing new projects,
                 creative ideas, or opportunities to be part of your vision.
@@ -235,7 +239,7 @@ export default function Contact() {
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
+                    <div className="bg-purple-100 dark:bg-purple-900/70 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
                       {info.icon}
                     </div>
                     <div>
@@ -259,7 +263,7 @@ export default function Contact() {
 
         {/* Footer */}
         <motion.div variants={itemVariants} className="mt-20 text-center">
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-purple-300 dark:purple-glow">
             © {new Date().getFullYear()} Manasvi M. All rights reserved.
           </p>
         </motion.div>

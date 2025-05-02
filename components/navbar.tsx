@@ -50,10 +50,16 @@ export default function Navbar() {
     setIsOpen(false)
   }
 
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark")
+  }
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm dark:bg-gray-900/80" : "bg-transparent"
+        scrolled
+          ? "bg-white/80 backdrop-blur-md shadow-sm dark:bg-gray-950/80 dark:border-b dark:border-gray-800"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,12 +101,7 @@ export default function Navbar() {
                   <Linkedin className="h-5 w-5" />
                 </Link>
                 {isMounted && (
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                    className="ml-2"
-                  >
+                  <Button variant="ghost" size="icon" onClick={toggleTheme} className="ml-2">
                     {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                   </Button>
                 )}
@@ -111,12 +112,7 @@ export default function Navbar() {
           {/* Mobile Navigation Button */}
           <div className="md:hidden flex items-center">
             {isMounted && (
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="mr-2"
-              >
+              <Button variant="ghost" size="icon" onClick={toggleTheme} className="mr-2">
                 {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
             )}
@@ -132,7 +128,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg">
+        <div className="md:hidden bg-white dark:bg-gray-950 shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link

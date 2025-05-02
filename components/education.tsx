@@ -77,7 +77,7 @@ export default function Education() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white"
+          className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:gradient-text"
         >
           Education & <span className="text-purple-600 dark:text-purple-400">Achievements</span>
         </motion.h2>
@@ -86,17 +86,17 @@ export default function Education() {
           {/* Education Timeline */}
           <motion.div variants={itemVariants}>
             <div className="flex items-center mb-8">
-              <div className="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
+              <div className="bg-purple-100 dark:bg-purple-900/70 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
                 <GraduationCap className="h-6 w-6" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Education</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white dark:purple-glow">Education</h3>
             </div>
 
             <div className="relative border-l-2 border-purple-200 dark:border-purple-800 pl-8 ml-4 space-y-10">
               {education.map((item, index) => (
                 <div key={index} className="relative">
-                  <div className="absolute -left-[41px] top-0 w-6 h-6 bg-purple-600 dark:bg-purple-500 rounded-full border-4 border-white dark:border-gray-900"></div>
-                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <div className="absolute -left-[41px] top-0 w-6 h-6 bg-purple-600 dark:bg-purple-500 rounded-full border-4 border-white dark:border-gray-900 dark:glow-effect"></div>
+                  <div className="bg-white dark:bg-gray-900/80 dark:border dark:border-purple-900/30 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow dark:card-hover">
                     <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{item.institution}</h4>
                     <p className="text-purple-600 dark:text-purple-400 font-medium mb-3">{item.degree}</p>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400 mb-2">
@@ -109,8 +109,8 @@ export default function Education() {
                         {item.location}
                       </div>
                     </div>
-                    <div className="mt-3 inline-block bg-purple-50 dark:bg-purple-900/30 px-3 py-1 rounded-full">
-                      <p className="text-purple-600 dark:text-purple-400 font-medium text-sm">{item.score}</p>
+                    <div className="mt-3 inline-block bg-purple-50 dark:bg-purple-900/50 dark:border dark:border-purple-700/50 px-3 py-1 rounded-full">
+                      <p className="text-purple-600 dark:text-purple-300 font-medium text-sm">{item.score}</p>
                     </div>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ export default function Education() {
             {/* Certifications */}
             <motion.div variants={itemVariants}>
               <div className="flex items-center mb-6">
-                <div className="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
+                <div className="bg-purple-100 dark:bg-purple-900/70 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
                   <Award className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Certifications</h3>
@@ -133,7 +133,7 @@ export default function Education() {
                 {certifications.map((cert, index) => (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-5 hover:shadow-lg transition-shadow"
+                    className="bg-white dark:bg-gray-900/80 dark:border dark:border-purple-900/30 rounded-lg shadow-md p-5 hover:shadow-lg transition-shadow dark:card-hover"
                   >
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">{cert.title}</h4>
                     <div className="flex justify-between text-sm">
@@ -148,7 +148,7 @@ export default function Education() {
             {/* Achievements */}
             <motion.div variants={itemVariants}>
               <div className="flex items-center mb-6">
-                <div className="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
+                <div className="bg-purple-100 dark:bg-purple-900/70 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
                   <Award className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Achievements</h3>
@@ -158,7 +158,7 @@ export default function Education() {
                 {achievements.map((achievement, index) => (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-5 hover:shadow-lg transition-shadow"
+                    className="bg-white dark:bg-gray-900/80 dark:border dark:border-purple-900/30 rounded-lg shadow-md p-5 hover:shadow-lg transition-shadow dark:card-hover"
                   >
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">{achievement.title}</h4>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">{achievement.description}</p>

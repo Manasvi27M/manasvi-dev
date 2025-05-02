@@ -63,7 +63,7 @@ export default function Skills() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white"
+          className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:gradient-text"
         >
           My <span className="text-purple-600 dark:text-purple-400">Skills</span>
         </motion.h2>
@@ -73,10 +73,10 @@ export default function Skills() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-900/80 dark:border dark:border-purple-900/30 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow dark:card-hover"
             >
               <div className="flex items-center mb-4">
-                <div className="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
+                <div className="bg-purple-100 dark:bg-purple-900/70 p-3 rounded-lg text-purple-600 dark:text-purple-400 mr-4">
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{category.title}</h3>
@@ -94,7 +94,9 @@ export default function Skills() {
         </div>
 
         <motion.div variants={itemVariants} className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-white">Technical Proficiency</h3>
+          <h3 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-white dark:purple-glow">
+            Technical Proficiency
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { name: "Front-End", value: 85, icon: <Layers className="h-5 w-5" /> },
@@ -105,21 +107,21 @@ export default function Skills() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow p-6"
+                className="bg-white dark:bg-gray-900/80 dark:border dark:border-purple-900/30 rounded-xl shadow p-6 dark:card-hover"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-full text-purple-600 dark:text-purple-400">
+                  <div className="bg-purple-100 dark:bg-purple-900/70 p-3 rounded-full text-purple-600 dark:text-purple-400">
                     {skill.icon}
                   </div>
                 </div>
                 <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">{skill.name}</h4>
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2.5">
                   <div
-                    className="bg-purple-600 dark:bg-purple-500 h-2.5 rounded-full"
+                    className="bg-purple-600 dark:bg-purple-500 dark:glow-effect h-2.5 rounded-full"
                     style={{ width: `${skill.value}%` }}
                   ></div>
                 </div>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 text-right">{skill.value}%</p>
+                <p className="mt-2 text-sm text-gray-600 dark:text-purple-300 text-right">{skill.value}%</p>
               </motion.div>
             ))}
           </div>

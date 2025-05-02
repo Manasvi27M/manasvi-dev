@@ -39,21 +39,21 @@ export default function About() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white"
+          className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:gradient-text"
         >
           About <span className="text-purple-600 dark:text-purple-400">Me</span>
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div variants={itemVariants} className="relative">
-            <div className="absolute -inset-4 bg-purple-100 dark:bg-purple-900/30 rounded-lg -z-10 transform -rotate-3"></div>
+            <div className="absolute -inset-4 bg-purple-100 dark:bg-purple-900/30 rounded-lg -z-10 transform -rotate-3 dark:glow-effect"></div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <img src="/placeholder.svg?height=800&width=600" alt="Manasvi M" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white dark:purple-glow">
               Aspiring Full Stack Developer
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
@@ -66,18 +66,18 @@ export default function About() {
               I'm constantly learning and growing in this dynamic field.
             </p>
             <div className="flex flex-wrap gap-4">
-              <div className="bg-purple-50 dark:bg-purple-900/30 px-4 py-2 rounded-full">
-                <p className="text-purple-600 dark:text-purple-400 font-medium">
+              <div className="bg-purple-50 dark:bg-purple-900/50 dark:border dark:border-purple-700/50 px-4 py-2 rounded-full dark:glow-effect">
+                <p className="text-purple-600 dark:text-purple-300 font-medium">
                   <span className="font-bold">9.22</span> CGPA
                 </p>
               </div>
-              <div className="bg-purple-50 dark:bg-purple-900/30 px-4 py-2 rounded-full">
-                <p className="text-purple-600 dark:text-purple-400 font-medium">
+              <div className="bg-purple-50 dark:bg-purple-900/50 dark:border dark:border-purple-700/50 px-4 py-2 rounded-full dark:glow-effect">
+                <p className="text-purple-600 dark:text-purple-300 font-medium">
                   <span className="font-bold">4+</span> Projects
                 </p>
               </div>
-              <div className="bg-purple-50 dark:bg-purple-900/30 px-4 py-2 rounded-full">
-                <p className="text-purple-600 dark:text-purple-400 font-medium">
+              <div className="bg-purple-50 dark:bg-purple-900/50 dark:border dark:border-purple-700/50 px-4 py-2 rounded-full dark:glow-effect">
+                <p className="text-purple-600 dark:text-purple-300 font-medium">
                   <span className="font-bold">3+</span> Open Source Contributions
                 </p>
               </div>

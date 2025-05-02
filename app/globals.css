@@ -27,25 +27,25 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 263 75% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 10%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 5% 10%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 263 75% 15%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 262.1 83.3% 57.8%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --ring: 263 75% 65%;
   }
 }
 
@@ -56,6 +56,12 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Explicit dark mode background */
+  .dark body {
+    @apply bg-gray-950;
+    background-color: #0a0a0f;
   }
 }
 
@@ -78,8 +84,41 @@
   textarea {
     font-family: var(--font-inter);
   }
+
+  /* Dark mode specific styles */
+  .dark .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400;
+  }
+
+  .dark .glow-effect {
+    box-shadow: 0 0 15px 2px rgba(139, 92, 246, 0.3);
+  }
+
+  .dark .purple-glow {
+    text-shadow: 0 0 8px rgba(167, 139, 250, 0.5);
+  }
+
+  .dark .card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .dark .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.5);
+  }
+
+  .dark .grid-bg {
+    background-image: radial-gradient(rgba(139, 92, 246, 0.15) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-color: #0a0a0f;
+  }
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Force dark mode background */
+html.dark {
+  background-color: #0a0a0f;
 }

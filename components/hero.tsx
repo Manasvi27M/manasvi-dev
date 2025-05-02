@@ -32,13 +32,13 @@ export default function Hero() {
   }
 
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative h-screen flex items-center justify-center overflow-hidden dark:grid-bg">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full bg-purple-500/10 dark:bg-purple-500/20"
+            className="absolute rounded-full bg-purple-500/10 dark:bg-purple-500/30"
             style={{
               width: `${Math.random() * 200 + 50}px`,
               height: `${Math.random() * 200 + 50}px`,
@@ -63,7 +63,9 @@ export default function Hero() {
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h2 className="text-xl md:text-2xl font-medium text-purple-600 dark:text-purple-400 mb-2">Hello, I'm</h2>
+            <h2 className="text-xl md:text-2xl font-medium text-purple-600 dark:text-purple-400 dark:purple-glow mb-2">
+              Hello, I'm
+            </h2>
           </motion.div>
 
           <motion.div
@@ -71,7 +73,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4">Manasvi M</h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:gradient-text mb-4">
+              Manasvi M
+            </h1>
           </motion.div>
 
           <motion.div
@@ -79,7 +83,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">Aspiring Full Stack Developer</h3>
+            <h3 className="text-xl md:text-2xl text-gray-700 dark:text-purple-200 mb-8">
+              Aspiring Full Stack Developer
+            </h3>
           </motion.div>
 
           <motion.div
@@ -90,7 +96,7 @@ export default function Hero() {
           >
             <Button
               size="lg"
-              className="bg-purple-600 hover:bg-purple-700 text-white"
+              className="bg-purple-600 hover:bg-purple-700 text-white dark:bg-purple-600/80 dark:hover:bg-purple-500 dark:glow-effect"
               onClick={() => {
                 if (typeof document !== "undefined") {
                   document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
@@ -102,7 +108,7 @@ export default function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-purple-600 text-purple-600 hover:bg-purple-50 dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-950/30"
+              className="border-purple-600 text-purple-600 hover:bg-purple-50 dark:border-purple-400 dark:text-purple-300 dark:hover:bg-purple-950/50"
             >
               Download Resume <Download className="ml-2 h-4 w-4" />
             </Button>
