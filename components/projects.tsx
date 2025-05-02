@@ -48,7 +48,8 @@ export default function Projects() {
       ],
       technologies: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB", "REST APIs"],
       icon: <Layers className="h-5 w-5" />,
-      link: "#"
+      link: "#",
+      github:"",
     },
     {
       title: "Crop Connect",
@@ -77,7 +78,8 @@ export default function Projects() {
       ],
       technologies: ["Flask", "MySQL", "Python", "SQL"],
       icon: <Database className="h-5 w-5" />,
-      github: "https://github.com/kee-rao/travel_planning"
+      github: "https://github.com/kee-rao/travel_planning",
+      link:"",
     },
     {
       title: "Graph Coloring Visualizer",
@@ -91,7 +93,7 @@ export default function Projects() {
       ],
       technologies: ["Python", "Streamlit", "Algorithms", "Graph Theory"],
       icon: <Cpu className="h-5 w-5" />,
-      github: ""
+      github: "",
       link: "https://graphcoloring.streamlit.app/"
     },
   ]
