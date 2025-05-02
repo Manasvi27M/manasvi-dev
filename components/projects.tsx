@@ -48,6 +48,7 @@ export default function Projects() {
       ],
       technologies: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB", "REST APIs"],
       icon: <Layers className="h-5 w-5" />,
+      link: "#"
     },
     {
       title: "Crop Connect",
@@ -61,6 +62,8 @@ export default function Projects() {
       ],
       technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
       icon: <Globe className="h-5 w-5" />,
+      github: "https://github.com/Manasvi27M/crop_connect",
+      link: "#"
     },
     {
       title: "WanderWise",
@@ -74,6 +77,7 @@ export default function Projects() {
       ],
       technologies: ["Flask", "MySQL", "Python", "SQL"],
       icon: <Database className="h-5 w-5" />,
+      github: "https://github.com/kee-rao/travel_planning"
     },
     {
       title: "Graph Coloring Visualizer",
@@ -87,6 +91,8 @@ export default function Projects() {
       ],
       technologies: ["Python", "Streamlit", "Algorithms", "Graph Theory"],
       icon: <Cpu className="h-5 w-5" />,
+      github: ""
+      link: "https://graphcoloring.streamlit.app/"
     },
   ]
 
@@ -177,11 +183,11 @@ export default function Projects() {
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
-                  <Button variant="outline" size="sm" className="text-gray-700 dark:text-gray-300 dark:border-gray-700">
+                  <Button variant="outline" size="sm" className="text-gray-700 dark:text-gray-300 dark:border-gray-700" onClick={() => window.open(project.github, '_blank')}>
                     <Github className="h-4 w-4 mr-2" /> Code
                   </Button>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-700 dark:glow-effect">
-                    <ExternalLink className="h-4 w-4 mr-2" /> Live Demo
+                  <Button size="sm" className="bg-purple-600 hover:bg-purple-700 dark:glow-effect" onClick={() => window.open(project.link, '_blank')}>
+                    <ExternalLink className="h-4 w-4 mr-2" /> Live Demo 
                   </Button>
                 </CardFooter>
               </Card>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import Image from "next/image"
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -48,7 +49,14 @@ export default function About() {
           <motion.div variants={itemVariants} className="relative">
             <div className="absolute -inset-4 bg-purple-100 dark:bg-purple-900/30 rounded-lg -z-10 transform -rotate-3"></div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <img src="/about-image.svg?height=800&width=600" alt="Manasvi M" className="w-full h-full object-cover" />
+              <Image
+                src="/about-image.webp"
+                alt="Manasvi M"
+                width={600}
+                height={800}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
           </motion.div>
 
