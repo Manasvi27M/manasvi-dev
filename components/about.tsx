@@ -46,7 +46,7 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div variants={itemVariants} className="relative">
-            <div className="absolute -inset-4 bg-purple-100 dark:bg-purple-900/30 rounded-lg -z-10 transform -rotate-3 dark:glow-effect"></div>
+            <div className="absolute -inset-4 bg-purple-100 dark:bg-purple-900/30 rounded-lg -z-10 transform -rotate-3"></div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <img src="/placeholder.svg?height=800&width=600" alt="Manasvi M" className="w-full h-full object-cover" />
             </div>
