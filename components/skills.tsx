@@ -68,7 +68,7 @@ export default function Skills() {
           My <span className="text-purple-600 dark:text-purple-400">Skills</span>
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pb-16">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -91,9 +91,7 @@ export default function Skills() {
               </ul>
             </motion.div>
           ))}
-        </div>
-
-      
+        </div>      
       </motion.div>
     </div>
   )
