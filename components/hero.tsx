@@ -109,7 +109,7 @@ export default function Hero() {
               size="lg"
               variant="outline"
               className="border-purple-600 text-purple-600 hover:bg-purple-50 dark:border-purple-400 dark:text-purple-300 dark:hover:bg-purple-950/50"
-              onClick={() => window.open("https://drive.google.com/file/d/1jEB3RaHxG8zTDTD9G8wKEEA637xarUMD/view?usp=sharing", '_blank')}
+              onClick={() => window.open("https://drive.google.com/file/d/1TQbAST-DxknVVVRh6PWzmBUikqLHVApJ/view?usp=sharing", '_blank')}
             >
               Download Resume <Download className="ml-2 h-4 w-4" />
             </Button>
