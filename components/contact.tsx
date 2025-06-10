@@ -92,14 +92,14 @@ export default function Contact() {
     {
       icon: <Linkedin className="h-5 w-5" />,
       title: "LinkedIn",
-      value: "linkedin.com/in/manasvii",
-      link: "https://linkedin.com/in/manasvii",
+      value: "linkedin.com/in/manasvi-m-48419725a/",
+      link: "https://www.linkedin.com/in/manasvi-m-48419725a/",
     },
     {
       icon: <Github className="h-5 w-5" />,
       title: "GitHub",
-      value: "github.com/manasvii",
-      link: "https://github.com/manasvii",
+      value: "github.com/Manasvi27M",
+      link: "https://github.com/Manasvi27M",
     },
   ]
 
