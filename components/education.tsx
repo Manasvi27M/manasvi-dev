@@ -34,7 +34,7 @@ export default function Education() {
       institution: "RNS Institute of Technology",
       degree: "Bachelor of Information Science and Engineering",
       period: "2022 - Present",
-      score: "CGPA: 9.22",
+      score: "CGPA: 9.29",
       location: "Bengaluru, Karnataka",
     },
     {
@@ -50,7 +50,7 @@ export default function Education() {
     {
       title: "Microsoft Certified — Azure Fundamentals (AZ-900)",
       issuer: "Microsoft",
-      date: "2023",
+      date: "2024",
     },
   ]
 

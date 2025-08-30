@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 export default function About() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -18,7 +18,7 @@ export default function About() {
         staggerChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -27,7 +27,7 @@ export default function About() {
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" },
     },
-  }
+  };
 
   return (
     <div className="container mx-auto px-4">
@@ -65,18 +65,20 @@ export default function About() {
               Aspiring Full Stack Developer
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              I'm a passionate developer with a strong foundation in both front-end and back-end technologies. I love
-              solving complex problems and building impactful web applications that deliver exceptional user
-              experiences.
+              I'm a passionate developer with a strong foundation in both
+              front-end and back-end technologies. I love solving complex
+              problems and building impactful web applications that deliver
+              exceptional user experiences.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Currently pursuing my Bachelor's in Information Science and Engineering at RNS Institute of Technology,
-              I'm constantly learning and growing in this dynamic field.
+              Currently pursuing my Bachelor's in Information Science and
+              Engineering at RNS Institute of Technology, I'm constantly
+              learning and growing in this dynamic field.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-purple-50 dark:bg-purple-900/50 dark:border dark:border-purple-700/50 px-4 py-2 rounded-full dark:glow-effect">
                 <p className="text-purple-600 dark:text-purple-300 font-medium">
-                  <span className="font-bold">9.22</span> CGPA
+                  <span className="font-bold">9.29</span> CGPA
                 </p>
               </div>
               <div className="bg-purple-50 dark:bg-purple-900/50 dark:border dark:border-purple-700/50 px-4 py-2 rounded-full dark:glow-effect">
@@ -86,7 +88,8 @@ export default function About() {
               </div>
               <div className="bg-purple-50 dark:bg-purple-900/50 dark:border dark:border-purple-700/50 px-4 py-2 rounded-full dark:glow-effect">
                 <p className="text-purple-600 dark:text-purple-300 font-medium">
-                  <span className="font-bold">3+</span> Open Source Contributions
+                  <span className="font-bold">3+</span> Open Source
+                  Contributions
                 </p>
               </div>
             </div>
@@ -94,5 +97,5 @@ export default function About() {
         </div>
       </motion.div>
     </div>
-  )
+  );
 }

@@ -1,35 +1,36 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Download, ArrowRight } from "lucide-react"
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Download, ArrowRight } from "lucide-react";
 
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [isMounted, setIsMounted] = useState(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true)
+    setIsMounted(true);
 
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
 
     if (typeof window !== "undefined") {
-      window.addEventListener("mousemove", handleMouseMove)
-      return () => window.removeEventListener("mousemove", handleMouseMove)
+      window.addEventListener("mousemove", handleMouseMove);
+      return () => window.removeEventListener("mousemove", handleMouseMove);
     }
-  }, [])
+  }, []);
 
   const calculateTranslate = (axis: "x" | "y", factor: number) => {
-    if (!isMounted) return 0
+    if (!isMounted) return 0;
 
-    const windowDimension = axis === "x" ? window.innerWidth : window.innerHeight
-    const mousePos = axis === "x" ? mousePosition.x : mousePosition.y
+    const windowDimension =
+      axis === "x" ? window.innerWidth : window.innerHeight;
+    const mousePos = axis === "x" ? mousePosition.x : mousePosition.y;
 
-    return (mousePos / windowDimension - 0.5) * factor
-  }
+    return (mousePos / windowDimension - 0.5) * factor;
+  };
 
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden dark:grid-bg">
@@ -62,7 +63,11 @@ export default function Hero() {
       {/* Content */}
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="text-xl md:text-2xl font-medium text-purple-600 dark:text-purple-400 dark:purple-glow mb-2">
               Hello, I'm
             </h2>
@@ -99,7 +104,9 @@ export default function Hero() {
               className="bg-purple-600 hover:bg-purple-700 text-white dark:bg-purple-600/80 dark:hover:bg-purple-500 dark:glow-effect"
               onClick={() => {
                 if (typeof document !== "undefined") {
-                  document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+                  document
+                    .getElementById("projects")
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }
               }}
             >
@@ -109,7 +116,12 @@ export default function Hero() {
               size="lg"
               variant="outline"
               className="border-purple-600 text-purple-600 hover:bg-purple-50 dark:border-purple-400 dark:text-purple-300 dark:hover:bg-purple-950/50"
-              onClick={() => window.open("https://drive.google.com/file/d/1TQbAST-DxknVVVRh6PWzmBUikqLHVApJ/view?usp=sharing", '_blank')}
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1rF0cbLrrngAvj4u79W-G1083v8Aj0Tvz/view?usp=drivesdk",
+                  "_blank"
+                )
+              }
             >
               Download Resume <Download className="ml-2 h-4 w-4" />
             </Button>
@@ -117,5 +129,5 @@ export default function Hero() {
         </div>
       </div>
     </div>
-  )
+  );
 }
