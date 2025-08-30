@@ -65,7 +65,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-purple-600 dark:text-purple-400">
+            <Link
+              href="/"
+              className="text-xl font-bold text-purple-600 dark:text-purple-400"
+            >
               Manasvi<span className="text-gray-800 dark:text-white">.dev</span>
             </Link>
           </div>
@@ -85,7 +88,7 @@ export default function Navbar() {
               ))}
               <div className="flex items-center space-x-2 ml-4">
                 <Link
-                  href="https://github.com/manasvii"
+                  href="https://github.com/Manasvi27M"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-700 hover:text-purple-600 dark:text-gray-200 dark:hover:text-purple-400"
@@ -93,7 +96,7 @@ export default function Navbar() {
                   <Github className="h-5 w-5" />
                 </Link>
                 <Link
-                  href="https://linkedin.com/in/manasvii"
+                  href="https://www.linkedin.com/in/manasvi-m-48419725a"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-700 hover:text-purple-600 dark:text-gray-200 dark:hover:text-purple-400"
@@ -101,8 +104,17 @@ export default function Navbar() {
                   <Linkedin className="h-5 w-5" />
                 </Link>
                 {isMounted && (
-                  <Button variant="ghost" size="icon" onClick={toggleTheme} className="ml-2">
-                    {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={toggleTheme}
+                    className="ml-2"
+                  >
+                    {theme === "dark" ? (
+                      <Sun className="h-5 w-5" />
+                    ) : (
+                      <Moon className="h-5 w-5" />
+                    )}
                   </Button>
                 )}
               </div>
@@ -112,15 +124,28 @@ export default function Navbar() {
           {/* Mobile Navigation Button */}
           <div className="md:hidden flex items-center">
             {isMounted && (
-              <Button variant="ghost" size="icon" onClick={toggleTheme} className="mr-2">
-                {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleTheme}
+                className="mr-2"
+              >
+                {theme === "dark" ? (
+                  <Sun className="h-5 w-5" />
+                ) : (
+                  <Moon className="h-5 w-5" />
+                )}
               </Button>
             )}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 dark:text-gray-200 dark:hover:text-purple-400"
             >
-              {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
+              {isOpen ? (
+                <X className="block h-6 w-6" />
+              ) : (
+                <Menu className="block h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -162,5 +187,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }
